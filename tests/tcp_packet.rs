@@ -1,12 +1,9 @@
-#[macro_use]
 extern crate nom;
 extern crate pktparse;
 
 mod tests {
     use nom::IResult::Done;
     use pktparse::{ethernet, ipv4, tcp};
-    use pktparse::ipv4::{IPv4Header, IPv4Address, IPv4Protocol};
-    use pktparse::ethernet::{EthernetFrame, MacAddress, EtherType};
 
     #[test]
     fn parse_tcp_packet() {
